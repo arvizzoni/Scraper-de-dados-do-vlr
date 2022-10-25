@@ -1,0 +1,20 @@
+Agente;Posição;Função;Origem;Bang;Habilidade de cura;Habilidade de dano;Habilidade de movimento;Habilidade de proteção;Habilidade de reconhecimento;Smoke
+Astra;Controlador;Smoker;Gana;0;0;1;0;1;0;1
+Breach;Iniciador;Support;Suécia;1;0;1;0;0;0;0
+Brimstone;Controlador;Smoker;Estados Unidos;0;0;1;0;1;0;1
+Chamber;Sentinela;Entry;França;0;0;1;1;1;1;0
+Cypher;Sentinela;Lurker;Marrocos;0;0;0;0;1;1;1
+Fade;Iniciador;Support;Turquia;0;0;1;0;1;1;0
+Jett;Duelista;Entry;Coreia do Sul;0;0;0;1;0;0;1
+KAY/O;Iniciador;Trader;Desconhecida;1;0;1;0;1;1;0
+Killjoy;Sentinela;Lurker;Alemanha;0;0;1;0;1;1;0
+Neon;Duelista;Entry;Filipinas;0;0;1;1;1;0;0
+Omen;Controlador;Smoker;Desconhecida;1;0;0;1;0;0;1
+Phoenix;Duelista;Trader;Reino Unido;1;1;1;0;1;0;0
+Raze;Duelista;Entry;Brasil;0;0;1;1;0;1;0
+Reyna;Duelista;Trader;México;1;1;0;1;0;0;0
+Sage;Sentinela;Support;China;0;1;0;0;1;1;0
+Skye;Iniciador;Support;Austrália;1;1;1;0;0;1;0
+Sova;Iniciador;Support;Rússia;0;0;1;0;0;1;0
+Viper;Controlador;Lurker;Estados Unidos;0;0;1;0;1;0;1
+Yoru;Duelista;Trader;Japão;1;0;0;1;0;0;0
