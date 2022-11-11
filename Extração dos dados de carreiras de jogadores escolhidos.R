@@ -56,7 +56,12 @@ funcao_para_organizacao_das_tabelas=function(x){
   tabela_com_nomes_de_linha=tabela_sem_NAs
   rownames(tabela_com_nomes_de_linha)=tabela[,1]
   tabela_com_nomes_de_linha=tabela_com_nomes_de_linha[,-1]
-  tabela_organizada=cbind(tabela_com_nomes_de_linha[,-c(7,8)],do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/')),tabela_com_nomes_de_linha[,12]/tabela_com_nomes_de_linha[,9],tabela_com_nomes_de_linha[,11]/tabela_com_nomes_de_linha[,9],as.numeric(do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/'))[,2])/tabela_com_nomes_de_linha[,2],as.numeric(do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/'))[,1])/as.numeric(do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/'))[,2]))
+  if(sum(tabela_com_nomes_de_linha[,3])>0){
+    tabela_organizada=cbind(tabela_com_nomes_de_linha[,-c(7,8)],do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/')),tabela_com_nomes_de_linha[,12]/tabela_com_nomes_de_linha[,9],tabela_com_nomes_de_linha[,11]/tabela_com_nomes_de_linha[,9],as.numeric(do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/'))[,2])/tabela_com_nomes_de_linha[,2],as.numeric(do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/'))[,1])/as.numeric(do.call(rbind,strsplit(tabela_com_nomes_de_linha[,8],split='/'))[,2]))
+  }
+  else{
+    tabela_organizada=cbind(tabela_com_nomes_de_linha[,1:2],as.data.frame(matrix(0,length(jogadores),15)))
+  }
   colnames(tabela_organizada)=c('Agent','Rounds played','Average Combat Score','KAST pct','Average damage per round','HS pct','Kills','Deaths','Assists','First Kills','First Deaths','Clutches Won','Clutch Situations','Assists per Kill','First Kills per Kill','Clutch Situations per Round','Clutch Success pct')
   tabela_organizada$`KAST pct`=as.numeric(gsub(x=tabela_organizada$`KAST pct`,pattern='%',replacement=''))/100
   tabela_organizada$`HS pct`=as.numeric(gsub(x=tabela_organizada$`HS pct`,pattern='%',replacement=''))/100
